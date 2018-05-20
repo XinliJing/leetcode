@@ -16,8 +16,8 @@ class Solution:
                         nums[j] = 0
                         break
                      
-        # 1号大佬的代码
-        # for i in range(len(nums)-1,-1,-1):
+        # 1号大佬的代码   正序不可以的时候想想倒序
+        # for i in range(len(nums)-1,-1,-1):    
         #     if nums[i] == 0:
         #         del nums[i]
         #         nums.append(0)
