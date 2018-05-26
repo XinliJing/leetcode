@@ -1,0 +1,25 @@
+class Solution:
+    def isPalindrome(self, s):
+        """
+        :type s: str
+        :rtype: bool
+        """
+        lowercase = string.ascii_lowercase
+        # uppercase = string.ascii_uppercase
+        digits    = string.digits
+        
+        s = s.lower()
+        i = 0
+        j = len(s)-1
+        
+        while(i < j):
+            if not (s[i] in lowercase or s[i] in digits):
+                i += 1
+            elif not (s[j] in lowercase or s[j] in digits):
+                j -= 1
+            elif s[i] != s[j]:
+                return False
+            else:
+                i += 1
+                j -= 1
+        return True
